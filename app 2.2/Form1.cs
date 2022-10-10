@@ -23,5 +23,17 @@ namespace app_2._2
             
         }
     }
-    
+    public class Logic
+    {
+        public static string Reverse(string sentence)
+
+        {
+            string[] words = sentence.Split();
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = new string(words[i].Reverse().ToArray());
+            }
+            return string.Join(" ", words);
+        }
+    }
 }
