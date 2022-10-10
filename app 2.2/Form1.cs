@@ -20,12 +20,8 @@ namespace app_2._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-    }
-    public class Logic
-        {
-        
+            
         }
-    
     }
+    
 }
