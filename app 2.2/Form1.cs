@@ -20,7 +20,19 @@ namespace app_2._2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            string sentence;
+            try
+            {
+                sentence = (this.txtSentence.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
+            Properties.Settings.Default.sentence = sentence;
+            Properties.Settings.Default.Save();
+            var average = Logic.Reverse(sentence);
+            MessageBox.Show("Результат: " + average.ToString());
         }
     }
     public class Logic
